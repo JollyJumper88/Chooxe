@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/ButtonActionMode"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombuttonstyle"
+            android:src="@drawable/button_actionmode_land"
+            android:text="@string/actionmode"
+            android:textColor="@drawable/custombuttontextcolor"
+            android:textSize="@dimen/button_text"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <SurfaceView
+                android:id="@+id/surfaceView1"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_weight="0"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/closeactionmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/surfaceView1"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/closeactionmode" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ButtonPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombuttonstyle"
+            android:src="@drawable/button_photo_land"
+            android:text="@string/photos"
+            android:textColor="@drawable/custombuttontextcolor"
+            android:textSize="@dimen/button_text"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/ButtonVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombuttonstyle"
+            android:text="@string/video"
+            android:textColor="@drawable/custombuttontextcolor"
+            android:textSize="@dimen/button_text"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/ButtonAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombuttonstyle"
+            android:text="@string/audio"
+            android:textColor="@drawable/custombuttontextcolor"
+            android:textSize="@dimen/button_text"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/ButtonScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombuttonstyle"
+            android:src="@drawable/button_chooxe_land"
+            android:text="@string/scan"
+            android:textColor="@drawable/custombuttontextcolor"
+            android:textSize="@dimen/button_text" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/webViewPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/LinearLayoutButtonBar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageViewSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/LinearLayoutButtonBar"
+        android:scaleType="center"
+        android:src="@drawable/splash"
+        android:visibility="gone" />
+
+</RelativeLayout>

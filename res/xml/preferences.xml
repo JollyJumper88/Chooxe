@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/general" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:disableDependentsState="false"
+            android:enabled="true"
+            android:key="autoScanCB"
+            android:summaryOff="@string/the_scanner_has_to_be_started_manually"
+            android:summaryOn="@string/the_qr_code_scanner_will_be_started_automatically"
+            android:title="Auto Scan" />
+
+        <ListPreference
+            android:defaultValue="zxing"
+            android:dialogTitle="@string/choose_a_scanner"
+            android:entries="@array/scannerEntry"
+            android:entryValues="@array/scannerValues"
+            android:key="scannerList"
+            android:summary="@string/choose_between_zxing_zbar_or_an_external_scanner"
+            android:title="@string/scanner" />
+        <ListPreference
+            android:defaultValue="OFF"
+            android:dialogTitle="@string/lightmode"
+            android:entries="@array/lightmodeEntry"
+            android:entryValues="@array/lightmodeEntry"
+            android:key="lightMode"
+            android:summary="@string/having_troubles_switch_back_to_quot_off_quot_"
+            android:title="@string/lightmode" />
+        <ListPreference
+            android:dialogTitle="@string/rotationdialogtitle"
+            android:entries="@array/rotationEntry"
+            android:entryValues="@array/rotationEntry"
+            android:key="rotationList"
+            android:summary="@string/rotationSummary"
+            android:title="@string/rotationtitle"
+            android:defaultValue="90"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/location" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:disableDependentsState="false"
+            android:key="shareLocationCB"
+            android:summaryOff="@string/the_location_will_not_be_shared"
+            android:summaryOn="@string/access_the_location_of_the_device"
+            android:title="@string/use_device_location" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="advanced"
+        android:title="@string/advanced" >
+        <Preference
+            android:key="clearcache"
+            android:summary="@string/clear_the_application_cache"
+            android:title="@string/clear_cache" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:disableDependentsState="false"
+            android:key="debugModeCB"
+            android:summaryOff="@string/debug_mode_disabled"
+            android:summaryOn="@string/debug_information_will_be_collected"
+            android:title="@string/debug_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="help"
+        android:title="@string/help" >
+        <Preference
+            android:key="about"
+            android:summary="@string/product_information"
+            android:title="@string/about" />
+        <Preference
+            android:key="feedback"
+            android:summary="@string/contact_the_developer"
+            android:title="@string/feedback" />
+        <Preference
+            android:key="rate"
+            android:summary="@string/view_this_application_on_the_andorid_market"
+            android:title="@string/rate_this_application" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

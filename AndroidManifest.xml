@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="at.android.chooxe"
+    android:versionCode="14"
+    android:versionName="1.0.2" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="10"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <permission
+        android:name="at.android.chooxe.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="at.android.chooxe.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+        
+        <receiver
+            android:name="at.android.chooxe.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+				
+                <category android:name="at.android.chooxe" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="at.android.chooxe.gcm.GcmIntentService" />
+
+        <activity
+            android:name="at.android.chooxe.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" 
+            android:launchMode="singleTop" 
+            android:configChanges="orientation|screenSize">
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+  				<action android:name="android.intent.action.VIEW"></action>			
+ 				<category android:name="android.intent.category.DEFAULT"></category>
+  				<category android:name="android.intent.category.BROWSABLE"></category>
+  				
+  				<data android:host="www.chooxe.me" android:scheme="http"></data>
+  				<data android:host="chooxe.me" android:scheme="http"></data>
+  				<data android:host="chooxe.me" android:scheme="https"></data>
+			</intent-filter>
+			
+			<intent-filter>
+		        <action android:name="android.intent.action.SEND" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		        <data android:mimeType="image/*" />
+		        <!-- <data android:mimeType="video/*"/>  --> 
+    		</intent-filter>
+    		
+			<intent-filter>
+   				<action android:name="android.intent.action.SEND" />
+   				<category android:name="android.intent.category.DEFAULT" />              
+  				<data android:host="www.youtube.com" android:mimeType="text/*" />
+			</intent-filter>
+    
+        </activity>
+        <activity android:name="at.android.chooxe.Preferences" >
+        </activity>
+        <activity
+            android:name="at.android.chooxe.History"
+            android:label="@string/history" >
+        </activity>
+        <activity
+            android:name="com.dm.zbar.android.scanner.ZBarScannerActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN_intern" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

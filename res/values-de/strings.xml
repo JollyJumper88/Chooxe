@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">chooxe.me</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_exit">Beenden</string>
+    <string name="menu_history">Verlauf</string>
+    <string name="menu_gallery">Gallerie</string>
+    <string name="menu_clearall">Alle löschen</string>
+    <string name="scan">Scannen</string>
+    <string name="history">Verlauf</string>
+    <string name="actionmode">Action Modus</string>
+    <string name="photos">Foto</string>
+    <string name="video">Video</string>
+    <string name="audio">Audio</string>
+
+    <string name="send_e_mail">Sende e-Mail</string>
+    <string name="general">Allgemein</string>
+    <string name="the_scanner_has_to_be_started_manually">Der Scanner wird manuell gestartet</string>
+    <string name="the_qr_code_scanner_will_be_started_automatically">Der QR Code Scanner wird automatisch gestartet</string>
+    <string name="choose_a_scanner">Wähle einen Scanner</string>
+    <string name="choose_between_zxing_zbar_or_an_external_scanner">Wähle zwischen Zxing, Zbar oder einem externen Scanner</string>
+    <string name="lightmode">Licht Modus</string>
+    <string name="having_troubles_switch_back_to_quot_off_quot_">Bei Problemen zurück zu \'OFF\'</string>
+    <string name="scanner">Scanner</string>
+    <string name="location">Location</string>
+    <string name="the_location_will_not_be_shared">Die Location wird nicht geteilt</string>
+    <string name="access_the_location_of_the_device">Zugriff auf die Loaction des Telefon</string>
+    <string name="use_device_location">Verwende Telefon Location</string>
+    <string name="advanced">Erweitert</string>
+    <string name="clear_the_application_cache">Anwendungscache löschen</string>
+    <string name="clear_cache">Cache löschen</string>
+    <string name="debug_mode_disabled">Debug Mode ausgeschaltet</string>
+    <string name="debug_information_will_be_collected">Debug Information wird gesammelt</string>
+    <string name="debug_mode">Debug Modus</string>
+    <string name="help">Hilfe</string>
+    <string name="product_information">Produkt Information</string>
+    <string name="about">Über</string>
+    <string name="contact_the_developer">Entwickler kontaktieren</string>
+    <string name="feedback">Feedback</string>
+    <string name="view_this_application_on_the_andorid_market">Diese Anwendung im Andorid Market aufrufen</string>
+    <string name="rate_this_application">Diese Anwendung bewerten</string>
+    <string name="select_a_file_to_upload">Datei auswählen</string>
+    <string name="not_online">Keine Internetverbindung</string>
+    <string name="image_upload">Chooxe Datei Upload</string>
+    <string name="finished_">Beendet.</string>
+    <string name="press_back_again_to_quit_chooxe_">Nochmals \'Zurück\' drücken um chooxe zu beenden.</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="upload_started_in_background">Upload im Hintergrund gestartet.</string>
+    <string name="do_you_really_want_to_quit_">Beenden?</string>
+    <string name="rotationtitle">Actionmode Orientierung</string>
+    <string name="rotationdialogtitle">Orientierung</string>
+    <string name="rotationSummary">Falls die Actionmode Vorschau verdreht ist, kann es hier korrigiert werden</string>
+
+</resources>

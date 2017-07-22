@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="scannerEntry">
+        <item name="zxing">Zxing v2.2</item>
+        <item name="zbar">ZBar v0.2</item>
+        <item name="external">External Scanner</item>
+    </string-array>
+    <string-array name="scannerValues">
+        <item name="zxing">zxing</item>
+        <item name="zbar">zbar</item>
+        <item name="external">external</item>
+    </string-array>
+    
+    
+    
+    <string-array name="rotationEntry">
+        <item>0</item>
+        <item>90</item>
+        <item>180</item>
+        <item>270</item>
+    </string-array>    
+    
+    
+    <!-- this is for zXing Scanner only - we write the value to the preferences in the MainActivity -->
+    <string-array name="lightmodeEntry">
+        <item>OFF</item>
+        <item>ON</item>
+        <item>AUTO</item>
+    </string-array>
+
+</resources>
